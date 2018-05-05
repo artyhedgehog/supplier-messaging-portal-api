@@ -1,5 +1,3 @@
-import { isModuleSpecifier } from 'babel-types';
-
 const express = require('express');
 
 const customers = require('../../../services/customers');
