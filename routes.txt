@@ -1,0 +1,58 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── logger                                        *                                                           
+ ├── jsonParser                                    *                                                           
+ ├── urlencodedParser                              *                                                           
+ ├── cookieParser                                  *                                                           
+ ├── serveStatic                                   *                                                           
+ ├── router                                        *                                                           
+ │   router                                                                                                    
+ │    └── bound dispatch                           /                                                           GET
+ │         └── <anonymous>                         /                                                           GET
+ │        
+ │   
+ ├── router                                        /^\/api\/?(?=\/|$)/                                         
+ │   router                                                                                                    
+ │    └── router                                   /^\/v1\/?(?=\/|$)/                                          
+ │        router                                                                                               
+ │         ├── router                              /^\/customers\/?(?=\/|$)/                                   
+ │         │   router                                                                                          
+ │         │    ├── bound dispatch                 /register                                                   POST
+ │         │    │    └── <anonymous>               /                                                           POST
+ │         │    │   
+ │         │    ├── bound dispatch                 /:customerId/requests                                       POST
+ │         │    │    └── <anonymous>               /                                                           POST
+ │         │    │   
+ │         │    └── bound dispatch                 /:customerId/requests                                       GET
+ │         │         └── <anonymous>               /                                                           GET
+ │         │        
+ │         │   
+ │         ├── router                              /^\/suppliers\/?(?=\/|$)/                                   
+ │         │   router                                                                                          
+ │         │    ├── bound dispatch                 /                                                           GET
+ │         │    │    └── <anonymous>               /                                                           GET
+ │         │    │   
+ │         │    ├── bound dispatch                 /invite                                                     POST
+ │         │    │    └── <anonymous>               /                                                           POST
+ │         │    │   
+ │         │    ├── bound dispatch                 /register                                                   POST
+ │         │    │    └── <anonymous>               /                                                           POST
+ │         │    │   
+ │         │    ├── bound dispatch                 /:supplierId/requests                                       GET
+ │         │    │    └── <anonymous>               /                                                           GET
+ │         │    │   
+ │         │    └── bound dispatch                 /:supplierId/requests/:requestId/reply                      POST
+ │         │         └── <anonymous>               /                                                           POST
+ │         │        
+ │         │   
+ │         └── router                              /^\/login\/?(?=\/|$)/                                       
+ │             router                                                                                          
+ │              └── bound dispatch                 /                                                           POST
+ │                   └── <anonymous>               /                                                           POST
+ │                  
+ │             
+ │        
+ │   
+ ├── <anonymous>                                   *                                                           
+ └── <anonymous>                                   *                                                           

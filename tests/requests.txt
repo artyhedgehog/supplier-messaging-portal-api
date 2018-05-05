@@ -1,0 +1,73 @@
+POST http://localhost:3000/api/v1/customers/register HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "password": "qwerty"
+}
+
+
+POST http://localhost:3000/api/v1/suppliers/invite HTTP/1.1
+content-type: application/json
+
+{
+  "supplierName": "str",
+  "lastName": "str",
+  "firstName": "str",
+  "phone": "str",
+  "email": "str"
+}
+
+
+POST http://localhost:3000/api/v1/suppliers/register HTTP/1.1
+content-type: application/json
+
+{
+  "supplierName": "str",
+  "lastName": "str",
+  "firstName": "str",
+  "phone": "str",
+  "email": "str",
+  "password": "str"
+}
+
+
+POST http://localhost:3000/api/v1/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "str",
+  "password": "str"
+}
+
+
+POST http://localhost:3000/api/v1/customers/a-customer-id/requests HTTP/1.1
+content-type: application/json
+
+{
+  "location": "str",
+  "description": "str",
+  "requiredDate": "str",
+  "lastDate": "str",
+  "supplierId": "str"
+}
+
+
+http://localhost:3000/api/v1/suppliers/a-supplier-id/requests
+
+
+http://localhost:3000/api/v1/suppliers
+
+
+http://localhost:3000/api/v1/customers/a-customer-id/requests
+
+
+POST http://localhost:3000/api/v1/suppliers/a-supplier-id/requests/a-request-id/reply HTTP/1.1
+content-type: application/json
+
+{
+  "description": "str",
+  "price": "str",
+  "availableDate": "str"
+}

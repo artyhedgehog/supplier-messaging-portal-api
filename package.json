@@ -14,6 +14,7 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "express-print-routes": "^1.0.0"
   }
 }
